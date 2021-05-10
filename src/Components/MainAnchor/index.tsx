@@ -2,14 +2,14 @@
 import React from 'react';
 import styles from './index.css'
 
-export interface MainAnchorProps extends React.HTMLAttributes<HTMLElement> {
-}
+export interface MainAnchorProps extends React.HTMLAttributes<HTMLElement> {}
 
-export const MainAnchor: React.FC<MainAnchorProps> = ({
-}) => {
+// this should be included in every template where a skip to main link is included.
+// Put at top of main content after navigation
+export const MainAnchor: React.FC<MainAnchorProps> = () => {
     return (
         <>
-           <div tabIndex={-1} id="main">main content</div>
+           <div css={styles} tabIndex={-1} id="main">main content</div>
         </>
     );
 }
