@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './index.css'
 
 export interface HeadingProps extends React.HTMLAttributes<HTMLElement> {
-    level: 1 | 2 | 3 | 4 | 5 | 6;
+    level: 1 | 2 | 3 | 4 | 5 | 6; //note styles only exist for header levels 1 and 2 but went ahead and handled all cases
 }
 
 export const Heading: React.FC<HeadingProps> = ({

@@ -10,3 +10,9 @@ export const bp = (breakpoint: string) => {
         return `@media(min-width: ${(breakpoints as any)[breakpoint]}px)`
     }
 }
+
+export const transition = (property: string) => {
+    if(!!property) {
+        return `transition: ${property} 0.1s ease-in`
+    }
+}

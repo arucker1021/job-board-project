@@ -20,6 +20,12 @@ export const JobListingPage: React.FC<JobListingPageProps> = ({
                <MainAnchor />
                {/* this will change once I load up data and get it working */}
                <JobHeaderBar headingText={"Jobs"} subheadingText={`3 listings`} buttonFunction={addJob} buttonText={"Add Job"} />
+               {/* {showTable && (
+                    <Table />
+               )} */}
+               
+
+               
            </main>
         </>
     );
