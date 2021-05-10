@@ -1,7 +1,7 @@
-import { css } from '@emotion/react'
+import { css } from "@emotion/react";
 
 export default css`
-    border-radius: 18px;
-    background-color: #C4C4C4;
-    vertical-align: middle;
-`
+  border-radius: 18px;
+  background-color: #c4c4c4;
+  vertical-align: middle;
+`;

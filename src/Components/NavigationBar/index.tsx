@@ -1,25 +1,21 @@
 /** @jsxImportSource @emotion/react */
-import styles from './index.css'
-import React from 'react';
-import { ProfileInfo } from './ProfileInfo';
-import { SkipToMainLink } from './SkipToMainLink';
+import styles from "./index.css";
+import React from "react";
+import { ProfileInfo } from "./ProfileInfo";
+import { SkipToMainLink } from "./SkipToMainLink";
 
-export interface NavigationBarProps {
-    name: string,
-    role: string,
+export interface NavigationBarProps extends React.HTMLAttributes<HTMLElement> {
+  name: string;
+  role: string;
 }
 
-export const NavigationBar: React.FC<NavigationBarProps> = ({
-    name, 
-    role,
-}) => {
-
-    return (
-        <>
-            <nav css={styles}>
-                <SkipToMainLink />
-                <ProfileInfo name={name} role={role}/>
-            </nav>
-        </>
-    );
-}
+export const NavigationBar: React.FC<NavigationBarProps> = ({ name, role, className }) => {
+  return (
+    <>
+      <nav css={styles} className={className}>
+        <SkipToMainLink />
+        <ProfileInfo name={name} role={role} />
+      </nav>
+    </>
+  );
+};

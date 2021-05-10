@@ -1,8 +1,8 @@
-import { css } from '@emotion/react'
+import { css } from "@emotion/react";
 
 export default css`
-    height: 64px;
-    background-color: #2D2D2D;
-    width: 100%;
-    color: white;
-`
+  height: 64px;
+  background-color: #2d2d2d;
+  width: 100%;
+  color: white;
+`;
