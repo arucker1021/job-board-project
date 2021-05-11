@@ -1,11 +1,11 @@
 import { css } from "@emotion/react";
-import { bp, transition } from "../../shared/css";
+import { border, borderRadius, bp, rem, transition } from "../../shared/css";
 
 export default css`
-  font-size: 16px;
-  line-height: 18px;
-  padding: 13px 16px;
-  border-radius: 8px;
+  font-size: ${rem(16)};
+  line-height: ${rem(18)};
+  padding: ${rem(13)} ${rem(16)};
+  ${borderRadius(8)};
   font-weight: 700;
   border: none;
   ${transition("all")};
@@ -20,24 +20,24 @@ export default css`
   &.primary {
     background-color: #085ff7;
     color: #fff;
-    border: 1px solid #085ff7;
+    ${border("#085ff7")};
   }
 
   &.primary:hover {
     background-color: #fff;
     color: #085ff7;
-    border: 1px solid #d4d2d0;
+    ${border("#D4D2D0")};
   }
 
   &.secondary {
     background-color: #fff;
     color: #085ff7;
-    border: 1px solid #d4d2d0;
+    ${border("#D4D2D0")};
   }
 
   &.secondary:hover {
     background-color: #085ff7;
     color: #fff;
-    border: 1px solid #085ff7;;
+    ${border("#085ff7")};
   }
 `;

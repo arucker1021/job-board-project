@@ -2,7 +2,7 @@ import { mount } from "enzyme";
 import React from "react";
 import { Button } from "../Button";
 import { Copy } from "../Copy";
-import { JobHeaderBar } from ".";
+import { JobPostingForm } from ".";
 
 describe("JobHeaderBar component tests", () => {
   const clicked = jest.fn();

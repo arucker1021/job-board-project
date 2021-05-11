@@ -16,3 +16,16 @@ export const transition = (property: string) => {
     return `transition: ${property} 0.1s ease-in`;
   }
 };
+
+export const borderRadius = (pixels: number) => {
+  return `border-radius: ${rem(pixels)}`;
+}
+
+
+export const rem = (pixels: number) => {
+  return `${pixels/16}rem`;
+}
+
+export const border = (color: string) => {
+  return `border: ${rem(1)} solid ${color}`;
+}

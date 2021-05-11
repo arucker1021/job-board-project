@@ -1,22 +1,23 @@
 import { css } from "@emotion/react";
-import { bp } from "../../shared/css";
+import { border, borderRadius, bp, rem } from "../../shared/css";
 
 export default css`
-  background-color: #FFF;
-  border: 1px solid #D4D2D0;
-  border-radius: 8px;
+  background-color: #fff;
+  ${border("#D4D2D0")};
+  ${borderRadius(8)};
 
   article {
-    padding: 12px 16px;
+    padding: ${rem(12)} ${rem(16)};
   }
 
-  .form-header, .form-fields {
-    border-bottom: 1px solid #D4D2D0;
+  .form-header,
+  .form-fields {
+    ${border("#D4D2D0")};
   }
 
-  ${bp('large')}{
+  ${bp("large")} {
     article {
-      padding: 24px 32px;
+      padding: ${rem(24)} ${rem(32)};
     }
   }
 `;

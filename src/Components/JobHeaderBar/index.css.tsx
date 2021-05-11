@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { bp } from "../../shared/css";
+import { bp, rem } from "../../shared/css";
 
 export default css`
   display: flex;
@@ -37,21 +37,16 @@ export default css`
       > h1 {
         font-weight: 700;
         display: flex;
-        margin-top: 2px;
+        margin-top: ${rem(2)};
       }
 
       > p {
-        margin-left: 8px;
+        margin-left: ${rem(8)};
       }
     }
 
     button {
       height: auto;
     }
-  }
-
-  ${bp("large")} {
-    max-width: 780px;
-    margin: 80px auto;
   }
 `;

@@ -1,18 +1,19 @@
 import { css } from "@emotion/react";
-import { bp } from "../../../shared/css";
+import { bp, rem } from "../../../shared/css";
 
 export default css`
   display: flex;
-  margin: 0 24px;
+  margin: 0 ${rem(24)};
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
   right: 0;
-  height: 64px;
+  height: ${rem(64)};
 
-  ${bp("large")} {
-    max-width: 780px;
+  ${bp("small")} {
+    max-width: ${rem(780)};
     margin: 0 auto;
+    padding: 0 ${rem(24)};
   }
 
   img {
@@ -26,16 +27,16 @@ export default css`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 8px;
+    margin-left: ${rem(8)};
   }
 
   .profile-name {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: ${rem(16)};
+    line-height: ${rem(24)};
   }
 
   .profile-role {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: ${rem(12)};
+    line-height: ${rem(18)};
   }
 `;

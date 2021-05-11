@@ -1,25 +1,26 @@
 import { css } from "@emotion/react";
+import { border, borderRadius, rem } from "../../shared/css";
 
 export default css`
   width: 100%;
   overflow-x: auto;
 
   .table-wrapper {
-      width: 100%;
-      min-width: 640px;
+    width: 100%;
+    min-width: ${rem(640)};
   }
 
   .table-header {
-    padding: 0 18px;
-    margin-bottom: 8px;
+    padding: 0 ${rem(18)};
+    margin-bottom: ${rem(8)};
 
     div {
       color: #646464;
       font-weight: 700;
       text-align: center;
 
-      &:first-of-type{
-          text-align: left;
+      &:first-of-type {
+        text-align: left;
       }
     }
   }
@@ -27,40 +28,38 @@ export default css`
   .table-body div {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 8px;
+    grid-column-gap: ${rem(8)};
     text-align: center;
 
     &:first-of-type {
-        text-align: left;
+      text-align: left;
     }
   }
 
   .table-row {
-    border: 1px solid #D4D2D0;
+    ${border("#D4D2D0")};
     background-color: #fff;
-    padding: 18px;
-    border-radius: 8px;
-    margin-bottom: 16px;
+    padding: ${rem(18)};
+    ${borderRadius(8)};
+    margin-bottom: ${rem(16)};
 
     div {
       display: flex;
       flex-direction: column;
       justify-content: center;
       color: #2d2d2d;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: ${rem(14)};
+      line-height: ${rem(21)};
 
       h2 {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: ${rem(14)};
+        line-height: ${rem(21)};
       }
 
       p {
         color: #949494;
       }
     }
-
-    
   }
   /* Span columns, this is passed in with table-data */
   .span-1 {
