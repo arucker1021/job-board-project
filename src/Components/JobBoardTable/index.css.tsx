@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { border, borderRadius, rem } from "../../shared/css";
+import { border, borderRadius, colors, rem } from "../../shared/css";
 
 export default css`
   width: 100%;
@@ -15,7 +15,7 @@ export default css`
     margin-bottom: ${rem(8)};
 
     div {
-      color: #646464;
+      color: ${colors.darkGray};
       font-weight: 700;
       text-align: center;
 
@@ -37,8 +37,8 @@ export default css`
   }
 
   .table-row {
-    ${border("#D4D2D0")};
-    background-color: #fff;
+    ${border(`${colors.border}`)};
+    background-color: ${colors.white};
     padding: ${rem(18)};
     ${borderRadius(8)};
     margin-bottom: ${rem(16)};
@@ -47,7 +47,7 @@ export default css`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: #2d2d2d;
+      color: ${colors.black};
       font-size: ${rem(14)};
       line-height: ${rem(21)};
 
@@ -57,7 +57,7 @@ export default css`
       }
 
       p {
-        color: #949494;
+        color: ${colors.darkGray};
       }
     }
   }

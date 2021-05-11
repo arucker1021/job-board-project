@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { bp, rem } from "../../shared/css";
+import { bp, colors, rem } from "../../shared/css";
 
 export default css`
   display: flex;
@@ -24,7 +24,7 @@ export default css`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: #646464;
+      color: ${colors.darkGray};
       font-weight: 400;
     }
   }

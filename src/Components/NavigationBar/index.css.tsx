@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
-import { rem } from "../../shared/css";
+import { colors, rem } from "../../shared/css";
 
 export default css`
   height: ${rem(64)};
-  background-color: #2d2d2d;
+  background-color: ${colors.black};
   width: 100%;
-  color: white;
+  color: ${colors.white};
 `;

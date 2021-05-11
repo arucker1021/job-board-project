@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
-import { border, borderRadius, bp, rem } from "../../shared/css";
+import { border, borderRadius, bp, colors, rem } from "../../shared/css";
 
 export default css`
-  background-color: #fff;
-  ${border("#D4D2D0")};
+  background-color: ${colors.white};
+  ${border(`${colors.border}`)};
   ${borderRadius(8)};
 
   article {
@@ -12,7 +12,7 @@ export default css`
 
   .form-header,
   .form-fields {
-    ${border("#D4D2D0")};
+    ${border(`${colors.border}`)};
   }
 
   ${bp("large")} {

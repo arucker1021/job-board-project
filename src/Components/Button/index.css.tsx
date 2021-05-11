@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { border, borderRadius, bp, rem, transition } from "../../shared/css";
+import { border, borderRadius, bp, colors, rem, transition } from "../../shared/css";
 
 export default css`
   font-size: ${rem(16)};
@@ -18,26 +18,26 @@ export default css`
   }
 
   &.primary {
-    background-color: #085ff7;
-    color: #fff;
-    ${border("#085ff7")};
+    background-color: ${colors.blue};
+    color: ${colors.white};
+    ${border(`${colors.blue}`)};
   }
 
   &.primary:hover {
-    background-color: #fff;
-    color: #085ff7;
-    ${border("#D4D2D0")};
+    background-color: ${colors.white};
+    color: ${colors.blue};
+    ${border(`${colors.border}`)};
   }
 
   &.secondary {
-    background-color: #fff;
-    color: #085ff7;
-    ${border("#D4D2D0")};
+    background-color: ${colors.white};
+    color: ${colors.blue};
+    ${border(`${colors.border}`)};
   }
 
   &.secondary:hover {
-    background-color: #085ff7;
-    color: #fff;
-    ${border("#085ff7")};
+    background-color: ${colors.blue};
+    color: ${colors.white};
+    ${border(`${colors.blue}`)};
   }
 `;

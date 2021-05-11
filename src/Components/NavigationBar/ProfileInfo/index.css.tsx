@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { bp, rem } from "../../../shared/css";
+import { bp, colors, rem } from "../../../shared/css";
 
 export default css`
   display: flex;
@@ -28,6 +28,7 @@ export default css`
     flex-direction: column;
     justify-content: center;
     margin-left: ${rem(8)};
+    color: ${colors.lightGray};
   }
 
   .profile-name {

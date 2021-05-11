@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
-import { rem } from "../../../shared/css";
+import { colors, rem } from "../../../shared/css";
 
 export default css`
   border-radius: ${rem(18)};
-  background-color: #c4c4c4;
+  background-color: ${colors.gray};
   vertical-align: middle;
 `;

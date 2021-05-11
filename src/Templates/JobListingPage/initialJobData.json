@@ -52,12 +52,14 @@
         {
             "name": "Job Title",
             "helperText": "What is the name of the role?",
-            "placeholderText": "e.g. Software Engineer"
+            "placeholderText": "e.g. Software Engineer",
+            "mappedField": "jobTitle"
         },
         {
             "name": "Location",
             "helperText": "Where is this job?",
-            "placeholderText": "e.g. Chicago, IL"
+            "placeholderText": "e.g. Chicago, IL",
+            "mappedField": "jobLocation"
         },
         {
             "name": "Sponsorship",
@@ -65,7 +67,8 @@
             "options": [
                 "Free",
                 "Sponsored"
-            ]
+            ],
+            "mappedField": "jobSponsorship"
         },
         {
             "name": "Status",
@@ -74,7 +77,8 @@
                 "Open",
                 "Closed",
                 "Paused"
-            ]
+            ],
+            "mappedField":"jobStatus"
         }
     ]
 }
