@@ -52,6 +52,6 @@ export default css`
 
   ${bp("large")} {
     max-width: 780px;
-    margin: 80px auto 0;
+    margin: 80px auto;
   }
 `;

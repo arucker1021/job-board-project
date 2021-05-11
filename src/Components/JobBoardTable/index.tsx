@@ -74,7 +74,7 @@ export const JobBoardTable: React.FC<JobBoardTableProps> = ({
                     </div>
                     <div className={"span-2"} aria-labelledby={"header4"}>
                       <Button
-                        disabled={job.editable}
+                        disabled={!job.editable ?? false}
                         color={"secondary"}
                         onClick={buttonHandler}
                       >

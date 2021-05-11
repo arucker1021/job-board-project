@@ -2,11 +2,11 @@ import { css } from "@emotion/react";
 import { bp } from "../../shared/css";
 
 export default css`
-  margin: 40px 24px 0;
+  margin: 40px 24px;
 
-  ${bp("large")} {
+  ${bp("small")} {
     max-width: 780px;
-    margin: 0 auto;
+    margin: 80px auto;
   }
 
   .job-table {
