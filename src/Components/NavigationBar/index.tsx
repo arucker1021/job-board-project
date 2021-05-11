@@ -9,7 +9,11 @@ export interface NavigationBarProps extends React.HTMLAttributes<HTMLElement> {
   role: string;
 }
 
-export const NavigationBar: React.FC<NavigationBarProps> = ({ name, role, className }) => {
+export const NavigationBar: React.FC<NavigationBarProps> = ({
+  name,
+  role,
+  className,
+}) => {
   return (
     <>
       <nav css={styles} className={className}>

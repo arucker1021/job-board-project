@@ -2,7 +2,6 @@ import { css } from "@emotion/react";
 import { bp } from "../../shared/css";
 
 export default css`
-  margin: 40px 24px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,7 +24,7 @@ export default css`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: #949494;
+      color: #646464;
       font-weight: 400;
     }
   }

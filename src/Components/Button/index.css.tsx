@@ -20,6 +20,7 @@ export default css`
   &.primary {
     background-color: #085ff7;
     color: #fff;
+    border: 1px solid #085ff7;
   }
 
   &.primary:hover {
@@ -37,6 +38,6 @@ export default css`
   &.secondary:hover {
     background-color: #085ff7;
     color: #fff;
-    border: none;
+    border: 1px solid #085ff7;;
   }
 `;
