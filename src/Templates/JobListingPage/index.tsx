@@ -1,18 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from "react";
+import React from "react";
 import { JobHeaderBar } from "../../Components/JobHeaderBar";
 import { MainAnchor } from "../../Components/MainAnchor";
 import { NavigationBar } from "../../Components/NavigationBar";
-import { Job, JobBoardTable, JobHeaders } from "../../Components/JobBoardTable";
+import { JobBoardTable, JobHeaders } from "../../Components/JobBoardTable";
 import styles from "./index.css";
 import data from "./initialJobData.json";
-import { setConstantValue } from "typescript";
 
 export interface JobListingPageProps {}
 let jobHeaders = data.headers as JobHeaders[];
-let jobFields = data.jobFields; //used for Add/Edit Page
+//let jobFields = data.jobFields; //used for Add/Edit Page
 
-export const JobListingPage: React.FC<JobListingPageProps> = ({}) => {
+export const JobListingPage: React.FC<JobListingPageProps> = () => {
   const initJobs = data.jobs;
   const [jobs, setJobs] = React.useState(initJobs);
 

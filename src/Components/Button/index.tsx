@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import styles from "./index.css";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {

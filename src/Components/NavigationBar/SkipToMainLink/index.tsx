@@ -5,7 +5,7 @@ import styles from "./index.css";
 export interface SkipToMainLinkProps
   extends React.HTMLAttributes<HTMLElement> {}
 
-export const SkipToMainLink: React.FC<SkipToMainLinkProps> = ({}) => {
+export const SkipToMainLink: React.FC<SkipToMainLinkProps> = () => {
   return (
     <>
       <a href={"#main"} css={styles}>

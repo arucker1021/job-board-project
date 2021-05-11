@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import { Button } from "../Button";
 import { Copy } from "../Copy";
 import { Heading } from "../Heading";
