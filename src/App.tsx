@@ -1,4 +1,4 @@
-import { JobListingPage } from './Templates/JobListingPage';
+import { JobListingPage } from "./Templates/JobListingPage";
 
 function App() {
   return (

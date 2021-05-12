@@ -1,84 +1,77 @@
 {
-    "headers": [
-        {
-            "columns": 5,
-            "title": "Job Title"
-        },
-        {
-            "columns": 4,
-            "title": "Posted"
-        },
-        {
-            "columns": 4,
-            "title": "Sponsorship"
-        },
-        {
-            "columns": 3,
-            "title": "Status"
-        },
-        {
-            "columns": 2,
-            "title": "Edit Job Posting",
-            "screenReader": true
-        }
-    ],
-    "jobs": [
-        {
-            "jobTitle": "Product Manager",
-            "jobLocation": "Austin, TX",
-            "jobPosted": "10/04/2020",
-            "jobSponsorship": "Free",
-            "jobStatus": "Open",
-            "editable": true
-        },
-        {
-            "jobTitle": "CEO",
-            "jobLocation": "Austin, TX",
-            "jobPosted": "12/30/2020",
-            "jobSponsorship": "Sponsored",
-            "jobStatus": "Paused",
-            "editable": true
-        },
-        {
-            "jobTitle": "Software Engineer",
-            "jobLocation": "Seattle, WA",
-            "jobPosted": "11/18/2020",
-            "jobSponsorship": "Free",
-            "jobStatus": "Closed",
-            "editable": true
-        }
-    ],
-    "jobFields": [
-        {
-            "name": "Job Title",
-            "helperText": "What is the name of the role?",
-            "placeholderText": "e.g. Software Engineer",
-            "mappedField": "jobTitle"
-        },
-        {
-            "name": "Location",
-            "helperText": "Where is this job?",
-            "placeholderText": "e.g. Chicago, IL",
-            "mappedField": "jobLocation"
-        },
-        {
-            "name": "Sponsorship",
-            "helperText": "Do you want to promote this job?",
-            "options": [
-                "Free",
-                "Sponsored"
-            ],
-            "mappedField": "jobSponsorship"
-        },
-        {
-            "name": "Status",
-            "helperText": "Are you ready to make this job listing public?",
-            "options": [
-                "Open",
-                "Closed",
-                "Paused"
-            ],
-            "mappedField":"jobStatus"
-        }
-    ]
+  "headers": [
+    {
+      "columns": 5,
+      "title": "Job Title"
+    },
+    {
+      "columns": 4,
+      "title": "Posted"
+    },
+    {
+      "columns": 4,
+      "title": "Sponsorship"
+    },
+    {
+      "columns": 3,
+      "title": "Status"
+    },
+    {
+      "columns": 2,
+      "title": "Edit Job Posting",
+      "screenReader": true
+    }
+  ],
+  "jobs": [
+    {
+      "jobTitle": "Product Manager",
+      "jobLocation": "Austin, TX",
+      "jobPosted": "10/04/2020",
+      "jobSponsorship": "Free",
+      "jobStatus": "Open",
+      "editable": true
+    },
+    {
+      "jobTitle": "CEO",
+      "jobLocation": "Austin, TX",
+      "jobPosted": "12/30/2020",
+      "jobSponsorship": "Sponsored",
+      "jobStatus": "Paused",
+      "editable": true
+    },
+    {
+      "jobTitle": "Software Engineer",
+      "jobLocation": "Seattle, WA",
+      "jobPosted": "11/18/2020",
+      "jobSponsorship": "Free",
+      "jobStatus": "Closed",
+      "editable": true
+    }
+  ],
+  "jobFields": [
+    {
+      "name": "Job Title",
+      "helperText": "What is the name of the role?",
+      "placeholderText": "e.g. Software Engineer",
+      "mappedField": "jobTitle"
+    },
+    {
+      "name": "Location",
+      "helperText": "Where is this job?",
+      "placeholderText": "e.g. Chicago, IL",
+      "mappedField": "jobLocation"
+    },
+    {
+      "name": "Sponsorship",
+      "helperText": "Do you want to promote this job?",
+      "options": ["Free", "Sponsored"],
+      "mappedField": "jobSponsorship"
+    },
+    {
+      "name": "Status",
+      "helperText": "Are you ready to make this job listing public?",
+      "options": ["Open", "Closed", "Paused"],
+      "mappedField": "jobStatus"
+    }
+  ]
 }

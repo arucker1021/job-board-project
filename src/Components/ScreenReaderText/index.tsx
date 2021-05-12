@@ -2,14 +2,16 @@
 import React from "react";
 import styles from "./index.css";
 
-export interface ScreenReaderTextProps extends React.HTMLAttributes<HTMLElement> {}
+export interface ScreenReaderTextProps
+  extends React.HTMLAttributes<HTMLElement> {}
 
-export const ScreenReaderText: React.FC<ScreenReaderTextProps> = ({ children, className }) => {
+export const ScreenReaderText: React.FC<ScreenReaderTextProps> = ({
+  children,
+  className,
+}) => {
   return (
     <>
-      <span css={styles}>
-        {children}
-      </span>
+      <span css={styles}>{children}</span>
     </>
   );
 };

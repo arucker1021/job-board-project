@@ -17,9 +17,9 @@ describe("JobListingPage component tests", () => {
 
   test("JobListingPage should output form if state is set to add Job", () => {
     const dom = mount(<JobListingPage />);
-    
+
     //simulate state change by clicking Add Job button
-    dom.find(Button).at(0).simulate('click');
+    dom.find(Button).at(0).simulate("click");
     expect(dom.find(NavigationBar).length).toEqual(1);
     expect(dom.find(JobHeaderBar).length).toEqual(0);
     expect(dom.find(JobPostingForm).length).toEqual(1);

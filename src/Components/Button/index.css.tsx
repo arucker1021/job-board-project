@@ -1,5 +1,12 @@
 import { css } from "@emotion/react";
-import { border, borderRadius, bp, colors, rem, transition } from "../../shared/css";
+import {
+  border,
+  borderRadius,
+  bp,
+  colors,
+  rem,
+  transition,
+} from "../../shared/css";
 
 export default css`
   font-size: ${rem(16)};

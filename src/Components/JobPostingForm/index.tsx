@@ -36,24 +36,23 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
     const data = formData.currentTarget.elements as any;
     const date = new Date();
 
-    const jobData: Job =  {
-      jobTitle: data['jobTitle'].value,
-      jobLocation: data['jobLocation'].value,
+    const jobData: Job = {
+      jobTitle: data["jobTitle"].value,
+      jobLocation: data["jobLocation"].value,
       jobPosted: `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`,
-      jobSponsorship: data['jobSponsorship'].value,
-      jobStatus: data['jobStatus'].value,
+      jobSponsorship: data["jobSponsorship"].value,
+      jobStatus: data["jobStatus"].value,
       editable: true,
     };
 
-    if(isAdding){
+    if (isAdding) {
       addJob(jobData);
-    }
-    else {
+    } else {
       editJob(jobData);
     }
   };
 
-  const jobObject = job && {...job} as any;
+  const jobObject = job && ({ ...job } as any);
 
   return (
     <>
@@ -96,15 +95,28 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
                       id={`${jobField.mappedField}`}
                       type={"text"}
                       required={true}
-                      defaultValue={isAdding ? "" : jobObject && jobObject[`${jobField.mappedField}`]}
+                      defaultValue={
+                        isAdding
+                          ? ""
+                          : jobObject && jobObject[`${jobField.mappedField}`]
+                      }
                       placeholder={jobField.placeholderText}
                     ></input>
                   )}
                   {jobField.options && (
-                    <select id={jobField.mappedField} defaultValue={isAdding ? "" : jobObject && jobObject[`${jobField.mappedField}`]}>
+                    <select
+                      id={jobField.mappedField}
+                      defaultValue={
+                        isAdding
+                          ? ""
+                          : jobObject && jobObject[`${jobField.mappedField}`]
+                      }
+                    >
                       {jobField.options.map((option) => {
                         return (
-                          <option key={option} value={option}>{option}</option>
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
                         );
                       })}
                     </select>
