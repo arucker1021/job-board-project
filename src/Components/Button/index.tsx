@@ -8,6 +8,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean | false;
   type?: "button" | "submit" | "reset" | undefined;
   formId?: string;
+  ariaLabel?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,6 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
   formId,
   type,
   id,
+  ariaLabel,
 }) => {
   return (
     <button
@@ -28,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       className={color}
       form={formId}
+      aria-label={ariaLabel}
     >
       {children}
     </button>

@@ -78,6 +78,7 @@ export const JobBoardTable: React.FC<JobBoardTableProps> = ({
                         disabled={!job.editable ?? false}
                         color={"secondary"}
                         onClick={buttonHandler}
+                        ariaLabel={`Edit ${job.jobTitle} role, ${job.jobLocation}`}
                       >
                         Edit
                       </Button>
