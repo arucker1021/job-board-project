@@ -122,7 +122,7 @@ describe("JobPostingForm component tests", () => {
       />
     );
 
-    dom.find('form').at(0).simulate("submit");
+    dom.find("form").at(0).simulate("submit");
     expect(dom.find(Button).at(1).text()).toEqual("Add Job");
     expect(added.mock.calls.length).toEqual(1);
     expect(edit.mock.calls.length).toEqual(0);
@@ -148,11 +148,37 @@ describe("JobPostingForm component tests", () => {
       />
     );
 
-    dom.find('form').at(0).simulate("submit");
+    dom.find("form").at(0).simulate("submit");
     expect(dom.find(Button).at(1).text()).toEqual("Save");
     expect(edit.mock.calls.length).toEqual(1);
     expect(added.mock.calls.length).toEqual(0);
     expect(canceled.mock.calls.length).toEqual(0);
+  });
+
+  test("JobPostingForm should update Date when calling Edit", () => {
+    const dom = mount(
+      <JobPostingForm
+        addJob={added}
+        editJob={edit}
+        cancelPosting={canceled}
+        isAdding={false}
+        jobFields={jobFieldMock}
+        job={{
+          jobTitle: "Spider CEO",
+          jobLocation: "spidertown",
+          jobPosted: "10/24/2020",
+          jobSponsorship: "Free",
+          jobStatus: "Open",
+          editable: true,
+        }}
+      />
+    );
+
+    const today = new Date();
+    const todayDate = `${today.getMonth()}/${today.getDate()}/${today.getFullYear()}`;
+
+    dom.find("form").at(0).simulate("submit");
+    expect(edit.mock.calls[0][0].jobPosted).toEqual(todayDate);
   });
 
   test("JobPostingForm should call cancelPosting function if Cancel is Clicked", () => {
