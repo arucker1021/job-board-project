@@ -53,6 +53,8 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
     }
   };
 
+  const jobObject = job && {...job} as any;
+
   return (
     <>
       <section css={styles} className={className}>
@@ -84,7 +86,7 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
           >
             {jobFields.map((jobField) => {
               return (
-                <div className="">
+                <div key={`${jobField.mappedField}`} className="job-field">
                   <label htmlFor={jobField.mappedField}>
                     <Heading level={2}>{jobField.name}</Heading>
                     <Copy>{jobField.helperText}</Copy>
@@ -94,12 +96,12 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
                       id={`${jobField.mappedField}`}
                       type={"text"}
                       required={true}
-                      defaultValue={isAdding ? "" : job && ""}
+                      defaultValue={isAdding ? "" : jobObject && jobObject[`${jobField.mappedField}`]}
                       placeholder={jobField.placeholderText}
                     ></input>
                   )}
                   {jobField.options && (
-                    <select id={jobField.mappedField} defaultValue={isAdding ? "" : job && ""}>
+                    <select id={jobField.mappedField} defaultValue={isAdding ? "" : jobObject && jobObject[`${jobField.mappedField}`]}>
                       {jobField.options.map((option) => {
                         return (
                           <option value={option}>{option}</option>

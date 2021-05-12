@@ -17,6 +17,7 @@ export const JobListingPage: React.FC<JobListingPageProps> = () => {
   const [jobs, setJobs] = React.useState(initJobs);
   const [editing, setEdit] = React.useState(false);
   const [adding, setAdd] = React.useState(false);
+  const [jobIdx, setJobIdx] = React.useState(-1);
 
   const addJob = (job: Job) => {
     setJobs([...jobs, job]);
@@ -27,12 +28,15 @@ export const JobListingPage: React.FC<JobListingPageProps> = () => {
     setAdd(true);
   };
 
-  const setEditJob = () => {
+  const setEditJob = (e: React.MouseEvent<HTMLElement>) => {
+    setJobIdx(parseInt(e.currentTarget.id.replace("editJob","")));
     setEdit(true);
   };
 
-  const editJob = () => {
-    console.log("Edit job on page");
+  const editJob = (job:Job) => {
+    const newJobs = [...jobs];
+    newJobs[jobIdx] = job;
+    setJobs([...newJobs]);
     setEdit(false);
   };
 
@@ -65,7 +69,7 @@ export const JobListingPage: React.FC<JobListingPageProps> = () => {
 
         {(editing || adding) && (
           <>
-            <JobPostingForm cancelPosting={cancelJobPosting} addJob={addJob} editJob={editJob} jobFields={jobFields} isAdding={adding} />
+            <JobPostingForm cancelPosting={cancelJobPosting} job={jobs[jobIdx]} addJob={addJob} editJob={editJob} jobFields={jobFields} isAdding={adding} />
           </>
         )}
       </main>

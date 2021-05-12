@@ -17,10 +17,12 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   formId,
   type,
+  id,
 }) => {
   return (
     <button
       disabled={disabled}
+      id={id}
       type={type}
       css={styles}
       onClick={onClick}
