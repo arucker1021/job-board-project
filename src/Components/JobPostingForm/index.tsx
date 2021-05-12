@@ -32,17 +32,16 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
   isAdding,
   className,
 }) => {
-  const handleFormData = (formData: React.FormEventHandler) => {
-    console.log(formData);
-    const data = formData;
+  const handleFormData = (formData: React.FormEvent<HTMLFormElement>) => {
+    const data = formData.currentTarget.elements as any;
     const date = new Date();
 
     const jobData: Job =  {
-      jobTitle: "",
-      jobLocation: "",
+      jobTitle: data['jobTitle'].value,
+      jobLocation: data['jobLocation'].value,
       jobPosted: `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`,
-      jobSponsorship: "Free",
-      jobStatus: "Closed",
+      jobSponsorship: data['jobSponsorship'].value,
+      jobStatus: data['jobStatus'].value,
       editable: true,
     };
 
@@ -103,7 +102,7 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
                     <select id={jobField.mappedField} defaultValue={isAdding ? "" : job && ""}>
                       {jobField.options.map((option) => {
                         return (
-                          <option value={option.toLowerCase()}>{option}</option>
+                          <option value={option}>{option}</option>
                         );
                       })}
                     </select>
