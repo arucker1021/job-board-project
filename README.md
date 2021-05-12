@@ -10,6 +10,7 @@ For implementing the design I went with a design system approach to make the dev
 
 In terms of functionality one of the major questions I ended up having was when editing a job whether or not to update the date field.  I think it made the most sense to update a Job's Posted date to whatever date is today and still the outstanding question of `Month/Day/Year` or `Day/Month/Year` and think it could have benefited from being standardized to a full string but left this out since it was a dev project and wanted to follow designs as closely as possible.
 
+On the JobForm Page there is questionable padding in a few places so I opted to keep it generic for each section so everything feels centered within their boxes.
 
 For the Individual Job Rows for the Job table I used a css grid so it's not 100% pixel perfect to the design but this allowed for the headers to match up with the individual field values without actually using a table (went down that rabbit hole and styling tables is ROUGH).
 
