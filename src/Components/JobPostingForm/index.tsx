@@ -104,7 +104,7 @@ export const JobPostingForm: React.FC<JobPostingFormProps> = ({
                     <select id={jobField.mappedField} defaultValue={isAdding ? "" : jobObject && jobObject[`${jobField.mappedField}`]}>
                       {jobField.options.map((option) => {
                         return (
-                          <option value={option}>{option}</option>
+                          <option key={option} value={option}>{option}</option>
                         );
                       })}
                     </select>
