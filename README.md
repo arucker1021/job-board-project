@@ -45,3 +45,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+
+
+# Final Thoughts
+There is currently a space within the Job Board Form where I used an `any` type on a couple of things to get what I needed to work.  I know this isn't ideal but with the data I'm working with I wanted to get it working first and this would be a good enhancement going forward
