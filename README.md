@@ -2,8 +2,6 @@
 
 This is a simple job board React app that allows a user to edit job listings and add more within a simple screen
 
-For the Add/Edit functionality I went with a Modal window to bypass routing since the entire application is 3 screens total (for now).
-
 I used emotionJS to go with the css in JS route since it was recommended and enzyme for testing with jest since it was what I was most comfortable with.
 
 For implementing the design I went with a design system approach to make the development of css a little more streamlined and implement standardized colors and use rem values globally within the project. I did change one of the colors from figma to a slightly darker gray because of the text not being WCAG AA compliant on the light gray background. I also used less colors over all since there were a few that were very close to each other and I did not feel it was necessary to have the full color gamut of what was effectively black.
@@ -48,3 +46,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 # Final Thoughts
 
 There is currently a space within the Job Board Form where I used an `any` type on a couple of things to get what I needed to work. I know this isn't ideal but with the data I'm working with I wanted to get it working first and this would be a good enhancement going forward
+
+Another future enhancement would be to add proper routing. It wasn't fully necessary since it was 2 screens with 1 screen having dynamic text.
