@@ -47,4 +47,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 There is currently a space within the Job Board Form where I used an `any` type on a couple of things to get what I needed to work. I know this isn't ideal but with the data I'm working with I wanted to get it working first and this would be a good enhancement going forward
 
-Another future enhancement would be to add proper routing. It wasn't fully necessary since it was 2 screens with 1 screen having dynamic text.
+Another future enhancement would be to add proper routing. It wasn't fully necessary since it was 2 screens with 1 screen having dynamic text and them being directly related.
